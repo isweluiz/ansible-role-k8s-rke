@@ -1,0 +1,47 @@
+galaxy_info:
+@meta license: MIT
+  role_name: ansible-k8s-rke-cluster
+  author: @isweluiz
+  description: An Ansible Role that setup Kubernetes Cluster with RKE on RHEL/CentOS/Fedora and Debian/Ubuntu.
+  license: MIT
+  min_ansible_version: 2.9
+  galaxy_tags:
+    - docker
+    - kubernetes
+    - rke
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: debian
+      versions:
+        - buster
+        - jessie
+        - stretch
+        - wheezy
+    - name: fedora
+      versions:
+        - 24
+        - 25
+        - 26
+        - 27
+        - 28
+        - 29
+        - 30
+        - 31
+        - 32
+    - name: ubuntu
+      versions:
+        - artful
+        - bionic
+        - cosmic
+        - disco
+        - eoan
+        - focal
+        - trusty
+        - xenial
+        - yakkety
+        - zesty
+
+dependencies:
+  - name: docker

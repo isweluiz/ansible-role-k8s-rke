@@ -1,0 +1,14 @@
+---
+- name: "Deploy Kubernetes cluster"
+  block: 
+    - name: "RKE :: Deploy new RKE user"
+      include_tasks:
+        file: rke-user.yml
+
+    - name: "RKE :: Set facts"
+      include_tasks:
+        file: rke-define-fact.yml
+
+    - name: "RKE :: Deploy Cluster"
+      include_tasks:
+        file: rke-deploy.yml

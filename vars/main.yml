@@ -1,0 +1,55 @@
+---
+##################################################################################################
+# Create the cluster configuration file
+# https://rancher.com/docs/rancher/v2.6/en/installation/resources/k8s-tutorials/ha-rke/
+# defaults file for k8s_rke
+# Map the RKE kubernetes image version across the selection to the kubernetes version.
+# https://github.com/rancher/rke/releases/tag/v1.3.11
+##################################################################################################
+rke_cluster_name: hmg-kubernetes
+# rke_network_plugin: 
+# rke_dns_provider: 
+rke_kubernetes_version: v1.23.6-rancher1-1
+# Defines rke version | https://github.com/rancher/rke/releases/
+rke_version: v1.3.11
+# Defines rke binary url download.
+rke_binary_url: "https://github.com/rancher/rke/releases/download/{{ rke_version }}/rke_linux-amd64"
+# User that will be used to connect on nodes during the installation proccess.
+rke_user: rke
+# Node that will be used to deploy cluster using RKE.
+rke_node: "{{ groups['masters'] | first }}"
+
+rke_ignore_docker_version: true
+rke_addon_job_timeout: 60
+# CIDR pool used to assign IP addresses to pods in the cluster.
+rke_cluster_network_cidr: 10.42.0.0/16
+# This is the virtual IP address that will be assigned to services created on Kubernetes.
+rke_service_network_cidr: 10.43.0.0/16
+rke_node_groups:
+  - name: masters
+    role:
+      - controlplane
+  - name: etcd
+    role:
+      - etcd
+  - name: workers
+    role:
+      - worker
+
+rke_dedicated_node_role_key: "node-role.kubernetes.io/{{ rke_dedicated_node_role_name | default('') }}"
+
+rke_dedicated_node: |
+  {
+    "labels": {
+      "{{ rke_dedicated_node_role_key }}": true
+    },
+    "taints": [
+      {
+        "key": "{{ rke_dedicated_node_role_key }}",
+        "value": true,
+        "effect": "NoSchedule"
+      }
+    ]
+  }
+
+kubetools_kubectl_version: "{{ rke_kubernetes_version.split('-')[0] }}"
