@@ -1,7 +1,7 @@
 galaxy_info:
-#@meta license: MIT
-  role_name: ansible-role-k8s-rke
-  #author: @isweluiz
+#meta license: MIT
+  #role_name: ansible-role-k8s-rke
+  author: isweluiz
   description: An Ansible Role that setup Kubernetes Cluster with RKE on RHEL/CentOS/Fedora and Debian/Ubuntu.
   license: MIT
   min_ansible_version: 2.9
