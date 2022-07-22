@@ -1,6 +1,6 @@
 # ansible-role-k8s-rke
 
-[![Ansible Role](https://img.shields.io/ansible/quality/27842.svg)](https://galaxy.ansible.com/isweluiz/ansible_package_debian_manage)
+[![Ansible Role](https://img.shields.io/ansible/quality/27842.svg)](https://galaxy.ansible.com/isweluiz/ansible_role_k8s_rke)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/isweluiz/ansible-package-debian-manage/blob/master/LICENSE)
 
 ## Ansible Role: ansible-role-k8s-rke 
