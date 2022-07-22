@@ -43,6 +43,5 @@ galaxy_info:
         - xenial
         - yakkety
         - zesty
-
-dependencies:
-  - name: geerlingguy.docker
+  dependencies:
+    - name: geerlingguy.docker
