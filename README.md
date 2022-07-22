@@ -1,5 +1,6 @@
 # ansible-role-k8s-rke
 
+[![Ansible Role](https://img.shields.io/ansible/quality/27842.svg)](https://galaxy.ansible.com/isweluiz/ansible_package_debian_manage)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/isweluiz/ansible-package-debian-manage/blob/master/LICENSE)
 
 ## Ansible Role: ansible-role-k8s-rke 
@@ -73,5 +74,13 @@ node6
 node7
 ```
 
-## License
-Mit
+License
+-------
+
+MIT
+
+Author Information
+------------------
+- [Ansible Galaxy](https://galaxy.ansible.com/isweluiz)
+- [Github](https://github.com/isweluiz)
+- [Linkedin](https://www.linkedin.com/in/isweluiz)
