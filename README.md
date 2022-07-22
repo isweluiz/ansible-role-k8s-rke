@@ -1,9 +1,15 @@
+# ansible-role-k8s-rke
+
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](https://github.com/isweluiz/ansible-package-debian-manage/blob/master/LICENSE)
 
-# Ansible Role: K8s RKE
+## Ansible Role: ansible-role-k8s-rke 
 
 An ansible role that setup kubernetes cluster with rke on rhel/centos/fedora and debian/ubuntu. 
 
+## Dependencies: 
+
+Docker - You can use the [ansible-role-docker](https://github.com/geerlingguy/ansible-role-docker)
+Kubectl - To manager the k8s cluster [anisble-role-kubectl](https://github.com/githubixx/ansible-role-kubectl)
 
 ## Variables:
 
@@ -26,7 +32,7 @@ An ansible role that setup kubernetes cluster with rke on rhel/centos/fedora and
 
 * `rke_service_network_cidr`: `'10.43.0.0/16'` - This is the virtual IP address that will be assigned to services created on Kubernetes.
 
-Playbook Example: 
+## Playbook Example: 
 
 ```yaml
 ---
@@ -66,7 +72,6 @@ node5
 node6
 node7
 ```
-
 
 ## License
 Mit
