@@ -45,4 +45,4 @@ galaxy_info:
         - zesty
 
 dependencies:
-  - name: docker
+  - name: geerlingguy.docker
